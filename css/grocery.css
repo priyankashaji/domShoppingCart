@@ -1,0 +1,41 @@
+table{
+  width:25%;
+  margin-left: 45px;
+  background-color:white;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+table td {
+  word-wrap:break-word;
+}
+table tr:nth-child(even) {
+  background: #CCC;
+}
+table tr:nth-child(odd) {
+  background: #FFF;
+}
+body {
+  background-color:  #FDF3D9;
+}
+input[type=text], [type=number]{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#add{
+  width: 15%;
+  background-color: gray;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 45px;
+}

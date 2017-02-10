@@ -1,4 +1,21 @@
+//Initialize Empty array
+var cart = Array();
 
+//Reading and appending the items to the cart array.
+function addToCart(){
+	if (document.getElementById("item").value
+  		&& document.getElementById("price").value) {
+      cart.push([document.getElementById("item").value,
+				parseInt(document.getElementById("price").value)])
+      }
+      //call function to update/refresh the table
+      makeTable(cart);
+      //clear the form
+      document.getElementById("item").value="";
+      document.getElementById("price").value="";
+}
+
+// function that build the table with cart items
 function makeTable(array) {
     var table = document.createElement('table');
 
@@ -36,20 +53,11 @@ function makeTable(array) {
     total.appendChild(total_cell2);
     table.appendChild(total);
 
-    //Add table to html div
+    //Add/Replace the table to html div
+    // if table already exists, replace it, else add to div
 	if (document.getElementById("cart").childNodes.length > 0){
 		document.getElementById("cart").replaceChild(table, document.getElementById("cart").childNodes[0]);
 	} else {
 		document.getElementById("cart").appendChild(table);
 	}
-}
-var cart = Array();
-function addToCart(){
-
-	if (document.getElementById("item").value
-  		&& document.getElementById("price").value) {
-      cart.push([document.getElementById("item").value,
-				parseInt(document.getElementById("price").value)])
-      }
-      makeTable(cart);
 }
